@@ -87,7 +87,7 @@ body {
                     rotate(calc(-30deg * var(--i)));
     }
     .hour {
-        width: 5.5px;
+        width: 3.5px;
         height: 65px;
     }
     .minute {
