@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b111e;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Clock */
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.numbers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.numbers span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #0ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%) 
+                rotate(calc(30deg * var(--i))) 
+                translateY(-120px)
+                rotate(calc(-30deg * var(--i)));
+}
+.hands div {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+}
+.hour {
+    width: 6px;
+    height: 70px;
+    background: #0ff;
+}
+.minute {
+    width: 4px;
+    height: 90px;
+    background: #0ff;
+}
+.second {
+    width: 2px;
+    height: 105px;
+    background: #f0f;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .clock {
+        width: 280px;
+        height: 280px;
+    }
+    .numbers span {
+        font-size: 1.1rem;
+        transform: translate(-50%, -50%) 
+                    rotate(calc(30deg * var(--i))) 
+                    translateY(-112px)
+                    rotate(calc(-30deg * var(--i)));
+    }
+    .hour {
+        width: 5.5px;
+        height: 65px;
+    }
+    .minute {
+        width: 3.5px;
+        height: 84px;
+    }
+    .second {
+        width: 2px;
+        height: 95px;
+    }
+}
