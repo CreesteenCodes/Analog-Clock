@@ -50,7 +50,7 @@ body {
     border-radius: 10px;
 }
 .hour {
-    width: 6px;
+    width: 4px;
     height: 70px;
     background: #0ff;
 }
@@ -61,7 +61,7 @@ body {
 }
 .second {
     width: 2px;
-    height: 110px;
+    height: 100px;
     background: #f0f;
 }
 .center-circle {
@@ -99,3 +99,4 @@ body {
         height: 95px;
     }
 }
+
